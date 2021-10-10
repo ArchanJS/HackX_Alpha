@@ -1,0 +1,73 @@
+<%- include ("../partials/header")%>
+
+<div class="common">
+    <div class="left">
+        <div class="img_part">
+            <img src="/dash_img.png" alt="Dash_img" class="dash_img">
+        </div>
+        <div class="class_info">
+        <div class="class_name">
+            <%= name %>
+        </div>
+        
+        <div class="join_id">
+            Joining ID - <%= jd %>
+        </div>
+        </div>
+
+        <div class="pwrapper">
+            <div class="pinput-fields">
+                <div class="pinput-fields2">
+                    <form class="d-flex flex-row col-lg-12 col-md-12 col-sm-12 col-12 justify-content-around" action="<%= "/discussion/" + cid + "/" + id + "/"%>" method="post">
+                        <input class="pinput col-lg-10 col-md-10 col-sm-10 col-10" type="text" name="msg" placeholder="Share something with your class">
+                        <button class="btn btn-info" type="submit">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="dis">
+            <% for(var i=discussions.length-1 ; i>=0 ; i--) {%>
+            <div class="disbox">
+                <div class="iconbox">
+                    <% if(data.fc_id === discussions[i].sender_id){ %>
+                    <span class="icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </span>
+                    <%}else{%>
+                    <span class="icon">
+                        <i class="fas fa-users"></i>
+                    </span>
+                    <%}%>  
+            </div>
+            <div class="msgbox">
+                <span class="s_name"><%= discussions[i].sender_name %></span><br>
+                    <span class="s_msg"><%= discussions[i].msg %></span><br>
+                </div>
+
+                <div class="deletebox">
+                    <a href="<%= "/assignment/delete-msg/" + cid + "/" + discussions[i]._id + "/" + id + "/"%>">
+                        <span class="dicon">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <% } %>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="nav-bar">
+    <a class="a_f_dash" href="<%="/assignment/" + cid + "/" + id + "/" %>">Stream</a>
+    <a class="a_f_dash" href="<%="/assignment/assign-show/" + cid + "/"%>">ClassRoom</a>
+    <a class="a_f_dash" href="<%="/assignment/show-students/" + cid  + "/"%>">People</a>
+    <!-- <a class = "a_f_dash" href="<%="/discussion/" + cid + "/" + id + "/" %>">Post something</a> -->
+    <!-- <a class="a_f_dash" href="">Grades</a> -->
+</div>
+
+<a href = "/dashboard">
+    <img src="https://i.postimg.cc/HsWm9cfw/log-removebg-preview.png" alt="logo" class="clogo">
+  </a>
