@@ -18,7 +18,7 @@
 
 ## Tech Stack:
 
-### 1.VClassroom:
+### 1. VClassroom:
 
     1. EJS
     2. CSS
@@ -27,7 +27,7 @@
     5. Express.JS
     6. MongoDB
 
-### 2.Alpha VC:
+### 2. Alpha VC:
     1. ReactJS
     2. CSS
     3. Bootstrap
