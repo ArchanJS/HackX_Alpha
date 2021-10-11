@@ -1,7 +1,7 @@
 
 
 # VClassroom Website: https://alpha-vclassroom.herokuapp.com/
-# Alpha VC Website: https://alpha-vc.herokuapp.com/ (Which was not hosted during video recording)
+# Alpha VC Website: https://alpha-vc.herokuapp.com/ (which was not hosted during video recording)
 
 # Team Name: Alpha
 
